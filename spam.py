@@ -14,7 +14,7 @@ def log():
 		w = json.loads(r.text)
 		print('Name Fb Mu : '+w['name'])
 		time.sleep(2)
-	except:
+	except KeyError:
 		os.system('rm -rf latip.txt')
 		print('Token Salah!')
 		time.sleep(1)
