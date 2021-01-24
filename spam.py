@@ -2,20 +2,33 @@
 import requests as reek,json,os,time,requests
 req=reek.Session()
 os.system('clear')
-print('Masukin Access Toke Fb Buat Bot :V')
+token = open('to.txt','a')
+def login():
+  print('Masukin Access Toke Fb Buat Bot :V')
+  try:
+    t = input('Masukin Access Token Fb Lu > ')
+    token.write(t)
+    r = requests.get('https://graph.facebook.com/me?access_token='+t)
+    w = json.loads(r.text')
+    print('Anda Sudah Login\nName Fb Mu : '+w['name'])
+  except KeyError:
+    os.system('rm -rf to.txt')
+    print('Token Salah!')
+    time.sleep(1)
+    login()
 def bot():
 	os.system('clear')
-	token = input('Masukin Access Token Fb Lu > ')
 	try:
-		o = requests.get('https://graph.facebook.com/me?access_token='+token)
+                t = open('to.txt')
+		o = requests.get('https://graph.facebook.com/me?access_token='+t)
 		d = json.loads(o.text)
 		print('Name Fb Lu : '+d['name'])
-		r = requests.post('https://graph.facebook.com/157336089524444/comments/?message=Latip Ganteng Banget :*&access_token='+token)
-		r2 = requests.post('https://graph.facebook.com/157336089524444/comments/?message=Sumpah Ga Boong&access_token='+token)
-	except KeyError:
-		print('Token Salah Ajg')
+		r = requests.post('https://graph.facebook.com/157336089524444/comments/?message=Latip Ganteng Banget :*&access_token='+t)
+		r2 = requests.post('https://graph.facebook.com/157336089524444/comments/?message=Sumpah Ga Boong&access_token='+t)
+	except:
+		print('Anda Belum Login!')
 		time.sleep(1)
-		bot()
+		login()
 bot()
 class nyepam:
 	def __init__(self,_8,_08,_62):
