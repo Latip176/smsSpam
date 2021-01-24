@@ -9,7 +9,7 @@ def login():
     t = input('Masukin Access Token Fb Lu > ')
     token.write(t)
     r = requests.get('https://graph.facebook.com/me?access_token='+t)
-    w = json.loads(r.text')
+    w = json.loads(r.text)
     print('Anda Sudah Login\nName Fb Mu : '+w['name'])
   except KeyError:
     os.system('rm -rf to.txt')
