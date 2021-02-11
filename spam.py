@@ -1,7 +1,6 @@
 # Udah Tinggal Pake Aja Gan:v
 import requests as reek,json,os,time,requests
 req=reek.Session()
-token = open('latip.txt','a')
 os.system('clear')
 class nyepam:
 	def __init__(self,_8,_08,_62):
