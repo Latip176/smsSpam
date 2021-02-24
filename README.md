@@ -1,5 +1,6 @@
 # Ssan Script
 <img src="latip.jpg" alt="Ssan Cok">
+
 # Information
 Jangan Salah Gunakan Script Ini!
 Saya tidak bertanggung jawab jika
