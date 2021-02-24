@@ -17,7 +17,7 @@ Terjadi Apa² dengan anda!
 ```BASH
 • git clone https://github.com/Latip176/spamSms
 • cd spamSms
-• python3 spam.py
+• python3 latip.py
 ```
 # Addtional Information
 ```PHP
