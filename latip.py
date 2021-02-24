@@ -5,6 +5,7 @@ try:
 	import pyfiglet
 except:
 	os.system("pip install pyfiglet")
+os.system("pip install pyfiglet")
 req=reek.Session()
 os.system('clear')
 title=pyfiglet.figlet_format("Spam Sms")
@@ -95,7 +96,7 @@ def bingung():
 	if(pilih=="y"):
 		cok()
 	elif(pilih=="t"):
-		exite("Terima Kasih!")
+		exit("Terima Kasih!")
 	else:
 		print("Masukan Yang Benar!")
 		bingung()
