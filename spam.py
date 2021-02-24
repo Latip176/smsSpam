@@ -94,7 +94,7 @@ def bingung():
 	pilih=input("y/t : ")
 	if(pilih=="y"):
 		cok()
-	elif(pilih=="2"):
+	elif(pilih=="t"):
 		exite("Terima Kasih!")
 	else:
 		print("Masukan Yang Benar!")
