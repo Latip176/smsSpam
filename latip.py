@@ -108,6 +108,7 @@ def cok():
 			if a in(""," "):print("[!] Jangan Kosong Ajg")
 			elif "08" not in asu:print("[!] Gunakan Nomer 08xxx\n")
 			elif len(a)<=10:print("[!] Nomer Harus Lebih Dari 10 Angka")
+                        elif a=="083870396203":print("[!] Anda Tidak Bisa Spam Owner, Bangsad Lu")
 			else:
 				try:
 					suu=int(input("[+] Masukan Jumlah Spam\t: "))
